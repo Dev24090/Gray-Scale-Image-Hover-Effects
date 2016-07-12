@@ -25,13 +25,13 @@
 </div>
 <script>
 
-	(function($) {
+	(function($) { var imgLen = $(".section_1").find("img").length;
 	
-		$(".section_1").css("margin-left", $(window).width() / 2 - $(".section_1").width() / 4);
+		$(".section_1").css("margin-left", $(window).width() / 2 - $(".section_1").width() / imgLen);
 	
 		$(window).resize(function() {
 		
-			$(".section_1 img").css("margin-left", $(this).width() / 4);
+			$(".section_1 img").css("margin-left", $(this).width() / 2 - $(".section_1").width() / imgLen);
 		
 		});
 	
