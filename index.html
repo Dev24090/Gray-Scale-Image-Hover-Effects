@@ -1,4 +1,4 @@
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<html><head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
  
  <style>
 	div.section_1 img {
@@ -15,16 +15,18 @@
 	}
 	
 	div.section_1 img:hover {
+		/*padding-left:100px;
+		width:20%;*/
 		-webkit-filter: grayscale(0);
 		filter: grayscale(0);
 	}
 	
 </style>
-<div class="section_1">
-  <a href="https://www.directadmin.com"><img src="https://www.directadmin.com/img/logo/logo.png" /></a>
-  <a href="https://mspcontrol.org/"><img src="https://mspcontrol.org/wp-content/uploads/2015/07/Logo-72dpi.png" /></a>
-  <a href="https://www.centos.org"><img src="https://www.centos.org/images/logo_small.png" /></a>
-  <a href="https://www.microsoft.com/en-us/cloud-platform/windows-server-2012-r2"><img src="https://assets.onestore.ms/cdnfiles/onestorerolling-1606-01000/shell/v3/images/logo/microsoft.png" /></a>
+</head><body><div class="section_1" style="margin-left: 135.5px;">
+  <a href="https://www.directadmin.com" style="margin:0"><img src="https://www.directadmin.com/img/logo/logo.png" style="margin-left: 75.5px;"></a>
+  <a href="https://mspcontrol.org/"><img src="https://mspcontrol.org/wp-content/uploads/2015/07/Logo-72dpi.png" style="margin-left: 75.5px;"></a>
+  <a href="https://www.centos.org"><img src="https://www.centos.org/images/logo_small.png" style="margin-left: 75.5px;"></a>
+  <a href="https://www.microsoft.com/en-us/cloud-platform/windows-server-2012-r2" style="margin:0"><img src="https://assets.onestore.ms/cdnfiles/onestorerolling-1606-01000/shell/v3/images/logo/microsoft.png" style="margin-left: 75.5px;"></a>
 </div>
 <script>
 
@@ -32,6 +34,12 @@
 	
 		$(".section_1").css("margin-left", $(window).width() / 2 - $(".section_1").width() / 4);
 	
+		$(window).resize(function() {
+		
+			$(".section_1 img").css("margin-left", $(this).width() / 4);
+		
+		});
+	
 	}) (jQuery);
 
-</script>
+</script></body></html>
