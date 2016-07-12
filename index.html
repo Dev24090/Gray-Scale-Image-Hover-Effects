@@ -1,13 +1,22 @@
-<style>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+ 
+ <style>
 	div.section_1 img {
+		margin-right:100px;
+		margin-bottom:25px;
 		-webkit-filter: grayscale(100%);
 		filter: grayscale(100%);
 		-webkit-transition: .3s ease-in-out;
 		transition: .3s ease-in-out;
-		margin-right:10px;
+	}
+	
+	div.section_1 {
+		direction:ltr;
 	}
 	
 	div.section_1 img:hover {
+		/*padding-left:100px;
+		width:20%;*/
 		-webkit-filter: grayscale(0);
 		filter: grayscale(0);
 	}
@@ -19,3 +28,18 @@
   <a href="https://www.centos.org"><img src="https://www.centos.org/images/logo_small.png" /></a>
   <a href="https://www.microsoft.com/en-us/cloud-platform/windows-server-2012-r2"><img src="https://assets.onestore.ms/cdnfiles/onestorerolling-1606-01000/shell/v3/images/logo/microsoft.png" /></a>
 </div>
+<script>
+
+	(function($) {
+	
+		$(".section_1").css("margin-left", $(window).width() / 2 - $(".section_1").width() / 4);
+	
+		/*$(window).resize(function() {
+		
+			$(".section_1 img").css("margin-left", $(this).width() / 4);
+		
+		});*/
+	
+	}) (jQuery);
+
+</script>
